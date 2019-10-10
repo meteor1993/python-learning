@@ -5,10 +5,10 @@ import pymysql
 
 # 数据库连接
 def connect():
-    conn = pymysql.connect(host='localhost',
+    conn = pymysql.connect(host='rm-uf6scm3ghrqkk306w9o.mysql.rds.aliyuncs.com',
                            port=3306,
                            user='root',
-                           password='123456',
+                           password='wsy@123456',
                            database='test',
                            charset='utf8mb4')
 
