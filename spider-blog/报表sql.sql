@@ -25,7 +25,8 @@ SELECT a.read_num - (
 			AND DATE_FORMAT(b.create_date, '%Y-%m-%d') = date_sub(DATE_FORMAT(a.create_date, '%Y-%m-%d'), INTERVAL 1 DAY)
 		ORDER BY b.create_date DESC LIMIT 1
 	) - a.rank_num AS rank_num
-	, a.create_date
+	, a.create_date,a.plantform
 FROM (SELECT * FROM spider_data ORDER BY create_date DESC LIMIT 1000000000000000) a
-WHERE a.plantform = 'cnblog'
-GROUP BY DATE_FORMAT(a.create_date, '%Y-%m-%d');
+
+GROUP BY DATE_FORMAT(a.create_date, '%Y-%m-%d'), a.plantform
+ORDER BY a.create_date DESC;
