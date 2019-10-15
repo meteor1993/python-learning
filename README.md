@@ -15,6 +15,8 @@
 
 * [小白学 Python（1）：开篇](https://www.geekdigging.com/2019/10/12/2870915863/)
 
+* [小白学 Python（2）：基础数据类型（上）](https://www.geekdigging.com/2019/10/13/2870915864/)
+
 * 剩余文章小编努力更新中，欢迎关注公众号，每日早 8：30 准时推送
 
 [Github代码仓库](https://github.com/meteor1993/python-learning)
