@@ -19,7 +19,15 @@
 
 * [小白学 Python（3）：基础数据类型（下）](https://www.geekdigging.com/2019/10/15/25090937/)
 
-* 剩余文章小编努力更新中，欢迎关注公众号，每日早 8：30 准时推送
+* [小白学 Python（4）：变量基础操作](https://www.geekdigging.com/2019/10/17/2392286754/)
+
+* [小白学 Python（5）：基础运算符（上）](https://www.geekdigging.com/2019/10/18/999362065/)
+
+* [小白学 Python（6）：基础运算符（下）](https://www.geekdigging.com/2019/10/20/2416267271/)
+
+* [小白学 Python（7）：基础流程控制（上）](https://www.geekdigging.com/2019/10/22/979409150/)
+
+* 剩余文章小编努力更新中，欢迎关注公众号，每日下午 16：30 准时推送，仓库目录不定期更新，更多文章可访问博客站 https://www.geekdigging.com/ 获取。
 
 [Github代码仓库](https://github.com/meteor1993/python-learning)
 
