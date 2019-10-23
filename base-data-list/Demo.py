@@ -33,3 +33,25 @@ print(len(list1 + list2))
 
 print('a' in list1)
 print(1 in list1)
+
+# 删除 list1 示例
+# list1 = [1, 2, 3, 4, 5]
+#
+# del list1
+# print(list1)
+
+list1 = [1, 2, 3, 4, 5]
+
+del list1[2]
+print(list1)
+
+print(list1)
+print(max(list1))
+# 比较会报错，注释
+# print(list4)
+# print(max(list4))
+
+print(list1)
+print(min(list1))
+print(list4)
+print(min(list4))
