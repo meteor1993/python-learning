@@ -27,6 +27,18 @@
 
 * [小白学 Python（7）：基础流程控制（上）](https://www.geekdigging.com/2019/10/22/979409150/)
 
+* [小白学 Python（8）：基础流程控制（下）](https://www.geekdigging.com/2019/10/23/2184234984/)
+
+* [小白学 Python（9）：基础数据结构（列表）（上）](https://www.geekdigging.com/2019/10/23/3066758654/)
+
+* [小白学 Python（10）：基础数据结构（列表）（下）](https://www.geekdigging.com/2019/10/25/1277177083/)
+
+* [小白学 Python（11）：基础数据结构（元组）](https://www.geekdigging.com/2019/10/26/1783681326/)
+
+* [小白学 Python（12）：基础数据结构（字典）（上）](https://www.geekdigging.com/2019/10/27/1304658395/)
+
+* [小白学 Python（13）：基础数据结构（字典）（下）](https://www.geekdigging.com/2019/10/27/2327215405/)
+
 * 剩余文章小编努力更新中，欢迎关注公众号，每日下午 16：30 准时推送，仓库目录不定期更新，更多文章可访问博客站 https://www.geekdigging.com/ 获取。
 
 [Github代码仓库](https://github.com/meteor1993/python-learning)
