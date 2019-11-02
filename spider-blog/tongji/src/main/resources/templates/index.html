@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>统计页面</title>
+    <link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
+    <style>
+        #app {
+            min-width: 100%;
+            min-height: 100%;
+        }
+    </style>
+</head>
+<body>
+<div id="app">
+    <el-container style="border: 1px solid #eee">
+        <el-aside width="200px" style="background-color: rgb(238, 241, 246)">
+            <el-menu
+                :default-active="plantformIndex"
+                @select="plantformSelect"
+                class="el-menu-vertical-demo"
+                background-color="#545c64"
+                text-color="#fff"
+                active-text-color="#ffd04b">
+                <el-menu-item index="1">
+                    <i class="el-icon-receiving"></i>
+                    <span slot="title">CSDN</span>
+                </el-menu-item>
+                <el-menu-item index="2">
+                    <i class="el-icon-menu"></i>
+                    <span slot="title">CNBLOG</span>
+                </el-menu-item>
+                <el-menu-item index="3">
+                    <i class="el-icon-film"></i>
+                    <span slot="title">掘金</span>
+                </el-menu-item>
+            </el-menu>
+        </el-aside>
+
+        <el-container>
+            <el-container>
+                <el-header>
+                    <el-menu
+                        :default-active="typeIndex"
+                        class="el-menu-demo1"
+                        mode="horizontal"
+                        @select="handleSelect"
+                        background-color="#545c64"
+                        text-color="#fff"
+                        active-text-color="#ffd04b">
+                        <el-menu-item index="1">增量数据</el-menu-item>
+                        <el-menu-item index="2">全量数据</el-menu-item>
+                    </el-menu>
+                </el-header>
+                <el-main>
+                    <div id="main" style="width: 1400px;height:800px;"></div>
+                </el-main>
+            </el-container>
+        </el-container>
+    </el-container>
+</div>
+<!-- import Vue before Element -->
+<script src="https://unpkg.com/vue/dist/vue.js"></script>
+<!-- import JavaScript -->
+<script src="https://unpkg.com/element-ui/lib/index.js"></script>
+<script src="https://cdn.staticfile.org/axios/0.19.0-beta.1/axios.min.js"></script>
+<script src="https://cdn.staticfile.org/echarts/4.4.0-rc.1/echarts-en.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+<script>
+    new Vue({
+        el: '#app',
+        data: function() {
+            return {
+                plantformIndex: '1',
+                typeIndex: '1'
+            }
+        },
+        methods: {
+            handleSelect(key, keyPath) {
+                this.typeIndex = key;
+
+                let plantform = 'csdn';
+
+                if (this.plantformIndex == 1) {
+                    plantform = 'csdn';
+                } else if (this.plantformIndex == 2) {
+                    plantform = 'cnblog';
+                } else {
+                    plantform = 'juejin';
+                }
+
+                this.getData(this.typeIndex, plantform);
+
+            },
+            plantformSelect(key, keyPath) {
+                this.plantformIndex = key;
+
+                let plantform = 'csdn';
+
+                if (this.plantformIndex == 1) {
+                    plantform = 'csdn';
+                } else if (this.plantformIndex == 2) {
+                    plantform = 'cnblog';
+                } else {
+                    plantform = 'juejin';
+                }
+
+                this.getData(this.typeIndex, plantform);
+
+
+            },
+            getData(type, plantform) {
+                let fans_num_list = [];
+                let like_num_list = [];
+                let rank_num_list = [];
+                let read_num_list = [];
+                let date_list = [];
+                const that = this
+                if (type == '1') { // 获取增量数据
+                    axios({
+                        method: 'get',
+                        url: '/spider/getIncrementalData',
+                        params: {
+                            plantform: plantform,
+                            start_date: '2019-10-08',
+                            end_date: moment().add(1, 'd').format('YYYY-MM-DD')
+                        },
+                    }).then(function (response) {
+                        for (var i = 0; i < response.data.length; i++) {
+                            date_list.push(moment(response.data[i].create_date).format('YYYY-MM-DD'));
+                            fans_num_list.push(response.data[i].fans_num);
+                            like_num_list.push(response.data[i].like_num);
+                            rank_num_list.push(response.data[i].rank_num);
+                            read_num_list.push(response.data[i].read_num);
+                        }
+                        that.drawPicture(date_list, fans_num_list, like_num_list, rank_num_list, read_num_list)
+                    })
+                } else { // 获取全量数据
+                    axios({
+                        method: 'get',
+                        url: '/spider/getAccumulatedData',
+                        params: {
+                            plantform: plantform,
+                            start_date: '2019-10-08',
+                            end_date: moment().add(1, 'd').format('YYYY-MM-DD')
+                        },
+                    }).then(function (response) {
+                        console.log(response.data)
+                        for (var i = 0; i < response.data.length; i++) {
+                            date_list.push(moment(response.data[i].create_date).format('YYYY-MM-DD'));
+                            fans_num_list.push(response.data[i].fans_num);
+                            like_num_list.push(response.data[i].like_num);
+                            rank_num_list.push(response.data[i].rank_num);
+                            read_num_list.push(response.data[i].read_num);
+                        }
+                        that.drawPicture(date_list, fans_num_list, like_num_list, rank_num_list, read_num_list)
+                    })
+                }
+            },
+            drawPicture(date_list, fans_num_list, like_num_list, rank_num_list, read_num_list) {
+                // 指定图表的配置项和数据
+                var option = {
+                    color: ['#003366', '#006699', '#4cabce', '#e5323e'],
+                    tooltip : {
+                        trigger: 'axis',
+                        axisPointer: {
+                            type: 'shadow',
+                            label: {
+                                show: true
+                            }
+                        }
+                    },
+                    toolbox: {
+                        show : true,
+                        feature : {
+                            mark : {show: true},
+                            dataView : {show: true, readOnly: false},
+                            magicType: {show: true, type: ['line', 'bar']},
+                            restore : {show: true},
+                            saveAsImage : {show: true}
+                        }
+                    },
+                    calculable : true,
+                    grid: {
+                        top: '12%',
+                        left: '1%',
+                        right: '10%',
+                        containLabel: true
+                    },
+                    title: {
+                        text: '统计数据'
+                    },
+                    legend: {
+                        data:['粉丝量','点赞数','排名','阅读量']
+                    },
+                    xAxis: {
+                        data: date_list
+                    },
+                    yAxis: {},
+                    series: [
+                        {
+                            name: '粉丝量',
+                            type: 'bar',
+                            data: fans_num_list
+                        },
+                        {
+                            name: '点赞数',
+                            type: 'bar',
+                            data: like_num_list
+                        },
+                        {
+                            name: '排名',
+                            type: 'bar',
+                            data: rank_num_list
+                        },
+                        {
+                            name: '阅读量',
+                            type: 'bar',
+                            data: read_num_list
+                        },
+                    ]
+                };
+                // 使用刚指定的配置项和数据显示图表。
+                myChart.setOption(option);
+            }
+        }
+    });
+    var myChart = echarts.init(document.getElementById('main'));
+
+
+
+
+
+
+</script>
+</body>
+</html>

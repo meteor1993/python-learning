@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.geekdigging.tongji.mapper.SpiderDataMapper" >
+    <resultMap id="BaseResultMap" type="com.geekdigging.tongji.model.SpiderDataModel" >
+        <id column="id" property="id" jdbcType="VARCHAR" />
+        <result column="plantform" property="plantform" jdbcType="VARCHAR" />
+        <result column="read_num" property="read_num" jdbcType="INTEGER" />
+        <result column="fans_num" property="fans_num" jdbcType="INTEGER" />
+        <result column="rank_num" property="rank_num" jdbcType="INTEGER" />
+        <result column="like_num" property="like_num" jdbcType="INTEGER" />
+        <result column="create_date" property="create_date" jdbcType="DATE"/>
+    </resultMap>
+
+    <select id="getIncrementalData" resultMap="BaseResultMap"  >
+        SELECT a.id,
+        a.read_num - (
+            SELECT b.read_num
+            FROM spider_data b
+            WHERE b.plantform = a.plantform
+              AND DATE_FORMAT(b.create_date, '%Y-%m-%d') = date_sub(DATE_FORMAT(a.create_date, '%Y-%m-%d'), INTERVAL 1 DAY)
+            ORDER BY b.create_date DESC LIMIT 1
+        ) AS read_num, a.fans_num - (
+            SELECT b.fans_num
+            FROM spider_data b
+            WHERE b.plantform = a.plantform
+              AND DATE_FORMAT(b.create_date, '%Y-%m-%d') = date_sub(DATE_FORMAT(a.create_date, '%Y-%m-%d'), INTERVAL 1 DAY)
+            ORDER BY b.create_date DESC LIMIT 1
+        ) AS fans_num
+             , a.like_num - (
+            SELECT b.like_num
+            FROM spider_data b
+            WHERE b.plantform = a.plantform
+              AND DATE_FORMAT(b.create_date, '%Y-%m-%d') = date_sub(DATE_FORMAT(a.create_date, '%Y-%m-%d'), INTERVAL 1 DAY)
+            ORDER BY b.create_date DESC LIMIT 1
+        ) AS like_num, (
+           SELECT b.rank_num
+           FROM spider_data b
+           WHERE b.plantform = a.plantform
+             AND DATE_FORMAT(b.create_date, '%Y-%m-%d') = date_sub(DATE_FORMAT(a.create_date, '%Y-%m-%d'), INTERVAL 1 DAY)
+           ORDER BY b.create_date DESC LIMIT 1
+       ) - a.rank_num AS rank_num
+         , a.create_date AS create_date,a.plantform
+        FROM (SELECT * FROM spider_data ORDER BY create_date DESC LIMIT 1000000000000000) a
+        WHERE a.plantform = #{plantform} AND a.create_date >= #{start_date} AND  #{end_date} >= a.create_date
+        GROUP BY DATE_FORMAT(a.create_date, '%Y-%m-%d'), a.plantform
+        ORDER BY a.create_date ASC;
+    </select>
+
+    <select id="getAccumulatedData" resultMap="BaseResultMap"  >
+        SELECT
+            *
+        FROM (SELECT * FROM spider_data ORDER BY create_date DESC LIMIT 1000000000000000) a
+        WHERE a.plantform = #{plantform} AND a.create_date >= #{start_date} AND  #{end_date} >= a.create_date
+        GROUP BY DATE_FORMAT(a.create_date, '%Y-%m-%d'), a.plantform
+        ORDER BY a.create_date ASC;
+    </select>
+</mapper>
