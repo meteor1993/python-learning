@@ -5,11 +5,11 @@ import pymysql
 
 # 数据库连接
 def connect():
-    conn = pymysql.connect(host='192.168.0.1',
+    conn = pymysql.connect(host='localhost',
                            port=3306,
                            user='root',
                            password='123456',
-                           database='test',
+                           database='blog_data',
                            charset='utf8mb4')
 
     # 获取操作游标
@@ -26,10 +26,10 @@ sql_insert = "insert into spider_data(id, plantform, read_num, fans_num, rank_nu
 req_csdn = request.Request('https://blog.csdn.net/meteor_93')
 req_csdn.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36')
 html_csdn = request.urlopen(req_csdn).read().decode('utf-8')
-read_num_csdn = etree.HTML(html_csdn).xpath('//*[@id="asideProfile"]/div[3]/dl[1]/dd/@title')[0]
-fans_num_csdn = etree.HTML(html_csdn).xpath('//*[@id="fan"]/text()')[0]
+read_num_csdn = etree.HTML(html_csdn).xpath('//*[@id="asideProfile"]/div[2]/dl[5]/@title')[0]
+fans_num_csdn = etree.HTML(html_csdn).xpath('//*[@id="fanBox"]/@title')[0]
 rank_num_csdn = etree.HTML(html_csdn).xpath('//*[@id="asideProfile"]/div[3]/dl[4]/@title')[0]
-like_num_csdn = etree.HTML(html_csdn).xpath('//*[@id="asideProfile"]/div[2]/dl[3]/dd/span/text()')[0]
+like_num_csdn = etree.HTML(html_csdn).xpath('//*[@id="asideProfile"]/div[2]/dl[3]/@title')[0]
 
 csdn_data = {
     "plantform": 'csdn',
@@ -131,6 +131,29 @@ cursor.execute(sql_insert, cnblog_data)
 conn.commit()
 
 print("---------CNBLOG 数据写入完成---------")
+
+# geekdigging
+
+req_geekdigging = request.Request('https://busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback')
+req_geekdigging.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/77.0.3865.90 Safari/537.36')
+req_geekdigging.add_header('Referer', 'https://www.geekdigging.com/')
+str_geekdigging = request.urlopen(req_geekdigging).read().decode('utf-8')
+dict1 = eval(str_geekdigging[21:][:-13])
+
+read_num_geekdigging = dict1['site_pv']
+
+geekdigging_data = {
+    "plantform": 'geekdigging',
+    "read_num": read_num_geekdigging,
+    "fans_num": 0,
+    "rank_num": 0,
+    "like_num": 0
+}
+
+cursor.execute(sql_insert, geekdigging_data)
+conn.commit()
+
+print("---------geekdigging 数据写入完成---------")
 
 # segmentfault 未完成
 
