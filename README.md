@@ -39,6 +39,24 @@
 
 * [小白学 Python（13）：基础数据结构（字典）（下）](https://www.geekdigging.com/2019/10/27/2327215405/)
 
+* [小白学 Python（14）：基础数据结构（集合）（上）](https://www.geekdigging.com/2019/10/29/2327215406/)
+
+* [小白学 Python（15）：基础数据结构（集合）（下）](https://www.geekdigging.com/2019/10/30/3105860436/)
+
+* [小白学 Python（16）：基础数据类型（函数）（上）](https://www.geekdigging.com/2019/10/31/3818474124/)
+
+* [小白学 Python（17）：基础数据类型（函数）（下）](https://www.geekdigging.com/2019/11/01/619492986/)
+
+* [小白学 Python（18）：基础文件操作](https://www.geekdigging.com/2019/11/01/3195979051/)
+
+* [小白学 Python（18）：基础文件操作](https://www.geekdigging.com/2019/11/01/3195979051/)
+
+* [小白学 Python（19）：基础异常处理](https://www.geekdigging.com/2019/11/03/271169345/)
+
+* [小白学 Python（20）：迭代器基础](https://www.geekdigging.com/2019/11/05/1111962512/)
+
+* [小白学 Python（21）：生成器基础](https://www.geekdigging.com/2019/11/06/988349733/)
+
 * 剩余文章小编努力更新中，欢迎关注公众号，每日下午 16：30 准时推送，仓库目录不定期更新，更多文章可访问博客站 https://www.geekdigging.com/ 获取。
 
 [Github代码仓库](https://github.com/meteor1993/python-learning)
