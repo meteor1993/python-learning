@@ -36,6 +36,10 @@
                     <i class="el-icon-film"></i>
                     <span slot="title">掘金</span>
                 </el-menu-item>
+                <el-menu-item index="4">
+                    <i class="el-icon-film"></i>
+                    <span slot="title">Geekdigging</span>
+                </el-menu-item>
             </el-menu>
         </el-aside>
 
@@ -87,8 +91,10 @@
                     plantform = 'csdn';
                 } else if (this.plantformIndex == 2) {
                     plantform = 'cnblog';
-                } else {
+                } else if (this.plantformIndex == 3) {
                     plantform = 'juejin';
+                } else {
+                    plantform = 'geekdigging';
                 }
 
                 this.getData(this.typeIndex, plantform);
@@ -103,8 +109,10 @@
                     plantform = 'csdn';
                 } else if (this.plantformIndex == 2) {
                     plantform = 'cnblog';
-                } else {
+                } else if (this.plantformIndex == 3) {
                     plantform = 'juejin';
+                } else {
+                    plantform = 'geekdigging';
                 }
 
                 this.getData(this.typeIndex, plantform);
