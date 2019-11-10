@@ -11,6 +11,8 @@
     <img src="https://cdn.geekdigging.com/wechat_qrcode_344.jpg">
 </center>
 
+* 博主微信：allen_6174
+
 # [小白学 Python 系列文章](https://www.geekdigging.com/categories/Python/)
 
 * [小白学 Python（1）：开篇](https://www.geekdigging.com/2019/10/12/2870915863/)
@@ -56,6 +58,12 @@
 * [小白学 Python（20）：迭代器基础](https://www.geekdigging.com/2019/11/05/1111962512/)
 
 * [小白学 Python（21）：生成器基础](https://www.geekdigging.com/2019/11/06/988349733/)
+
+* [小白学 Python（22）：time 和 calendar 模块简单使用](https://www.geekdigging.com/2019/11/07/908307735/)
+
+* [小白学 Python（23）：Excel 基础操作（上）](https://www.geekdigging.com/2019/11/07/3507147382/)
+
+* [小白学 Python（24）：Excel 基础操作（下）](https://www.geekdigging.com/2019/11/09/2520318609/)
 
 * 剩余文章小编努力更新中，欢迎关注公众号，每日下午 16：30 准时推送，仓库目录不定期更新，更多文章可访问博客站 https://www.geekdigging.com/ 获取。
 
