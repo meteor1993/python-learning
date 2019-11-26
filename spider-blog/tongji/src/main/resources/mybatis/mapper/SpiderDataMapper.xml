@@ -12,35 +12,8 @@
     </resultMap>
 
     <select id="getIncrementalData" resultMap="BaseResultMap"  >
-        SELECT a.id,
-        a.read_num - (
-            SELECT b.read_num
-            FROM spider_data b
-            WHERE b.plantform = a.plantform
-              AND DATE_FORMAT(b.create_date, '%Y-%m-%d') = date_sub(DATE_FORMAT(a.create_date, '%Y-%m-%d'), INTERVAL 1 DAY)
-            ORDER BY b.create_date DESC LIMIT 1
-        ) AS read_num, a.fans_num - (
-            SELECT b.fans_num
-            FROM spider_data b
-            WHERE b.plantform = a.plantform
-              AND DATE_FORMAT(b.create_date, '%Y-%m-%d') = date_sub(DATE_FORMAT(a.create_date, '%Y-%m-%d'), INTERVAL 1 DAY)
-            ORDER BY b.create_date DESC LIMIT 1
-        ) AS fans_num
-             , a.like_num - (
-            SELECT b.like_num
-            FROM spider_data b
-            WHERE b.plantform = a.plantform
-              AND DATE_FORMAT(b.create_date, '%Y-%m-%d') = date_sub(DATE_FORMAT(a.create_date, '%Y-%m-%d'), INTERVAL 1 DAY)
-            ORDER BY b.create_date DESC LIMIT 1
-        ) AS like_num, (
-           SELECT b.rank_num
-           FROM spider_data b
-           WHERE b.plantform = a.plantform
-             AND DATE_FORMAT(b.create_date, '%Y-%m-%d') = date_sub(DATE_FORMAT(a.create_date, '%Y-%m-%d'), INTERVAL 1 DAY)
-           ORDER BY b.create_date DESC LIMIT 1
-       ) - a.rank_num AS rank_num
-         , a.create_date AS create_date,a.plantform
-        FROM (SELECT * FROM spider_data ORDER BY create_date DESC LIMIT 1000000000000000) a
+        SELECT a.id, a.read_num AS read_num, a.fans_num AS fans_num, a.like_num  AS like_num, a.rank_num AS rank_num, a.create_date AS create_date,a.plantform
+        FROM result_data a
         WHERE a.plantform = #{plantform} AND a.create_date >= #{start_date} AND  #{end_date} >= a.create_date
         GROUP BY DATE_FORMAT(a.create_date, '%Y-%m-%d'), a.plantform
         ORDER BY a.create_date ASC;
