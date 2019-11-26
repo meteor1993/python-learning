@@ -12,7 +12,7 @@
     </resultMap>
 
     <select id="getIncrementalData" resultMap="BaseResultMap"  >
-        SELECT a.id, a.read_num AS read_num, a.fans_num AS fans_num, a.like_num  AS like_num, a.rank_num AS rank_num, a.create_date AS create_date,a.plantform
+        SELECT a.read_num AS read_num, a.fans_num AS fans_num, a.like_num  AS like_num, a.rank_num AS rank_num, a.create_date AS create_date,a.plantform
         FROM result_data a
         WHERE a.plantform = #{plantform} AND a.create_date >= #{start_date} AND  #{end_date} >= a.create_date
         GROUP BY DATE_FORMAT(a.create_date, '%Y-%m-%d'), a.plantform
