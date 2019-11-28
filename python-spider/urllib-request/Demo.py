@@ -1,4 +1,7 @@
 import urllib.request
+import urllib.parse
+import urllib.error
+import socket
 
 response = urllib.request.urlopen('https://www.geekdigging.com/')
 # 打印内容太长，先注释
@@ -27,3 +30,26 @@ print(response.info())
 
 # 读取响应体
 print(response.readline().decode('utf-8'))
+
+# data 示例
+post_data = bytes(urllib.parse.urlencode({'name': 'geekdigging', 'hello':'world'}), encoding='utf8')
+response = urllib.request.urlopen('https://httpbin.org/post', data = post_data)
+print(response.read().decode('utf-8'))
+
+# timeout 示例 正常不超时
+response = urllib.request.urlopen('http://httpbin.org/get', timeout = 1)
+print(response.read().decode('utf-8'))
+
+# timeout 示例 超时示例 注释 有需要可开启
+# response = urllib.request.urlopen('http://httpbin.org/get', timeout = 0.1)
+# print(response.read().decode('utf-8'))
+
+# timeout 示例 超时异常捕捉示例
+try:
+    response = urllib.request.urlopen('http://httpbin.org/get', timeout=0.1)
+    print(response.read().decode('utf-8'))
+except urllib.error.URLError as e:
+    if isinstance(e.reason, socket.timeout):
+        print('请求超时啦~~~')
+    else:
+        print(e)
