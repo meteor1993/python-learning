@@ -13,7 +13,7 @@
 
 * 博主微信：allen_6174
 
-# [小白学 Python 系列文章](https://www.geekdigging.com/categories/Python/)
+# [小白学 Python 基础系列文章](https://www.geekdigging.com/tags/Python-%E5%9F%BA%E7%A1%80/)
 
 * [小白学 Python（1）：开篇](https://www.geekdigging.com/2019/10/12/2870915863/)
 
@@ -65,7 +65,33 @@
 
 * [小白学 Python（24）：Excel 基础操作（下）](https://www.geekdigging.com/2019/11/09/2520318609/)
 
-* 剩余文章小编努力更新中，欢迎关注公众号，每日下午 16：30 准时推送，仓库目录不定期更新，更多文章可访问博客站 https://www.geekdigging.com/ 获取。
+# [小白学 Python 爬虫系列文章](https://www.geekdigging.com/tags/Python-%E7%88%AC%E8%99%AB/)
+
+* [小白学 Python 爬虫（1）：开篇](https://www.geekdigging.com/2019/11/13/3303836941/)
+
+* [小白学 Python 爬虫（2）：前置准备（一）基本类库的安装](https://www.geekdigging.com/2019/11/20/2586166930/)
+
+* [小白学 Python 爬虫（3）：前置准备（二）Linux基础入门](https://www.geekdigging.com/2019/11/21/1005563697/)
+
+* [小白学 Python 爬虫（4）：前置准备（三）Docker基础入门](https://www.geekdigging.com/2019/11/22/3679472340/)
+
+* [小白学 Python 爬虫（5）：前置准备（四）数据库基础](https://www.geekdigging.com/2019/11/24/334078215/)
+
+* [小白学 Python 爬虫（6）：前置准备（五）爬虫框架的安装](https://www.geekdigging.com/2019/11/25/1881661601/)
+
+* [小白学 Python 爬虫（7）：HTTP 基础](https://www.geekdigging.com/2019/11/26/1197821400/)
+
+* [小白学 Python 爬虫（8）：网页基础](https://www.geekdigging.com/2019/11/27/101847406/)
+
+* [小白学 Python 爬虫（9）：爬虫基础](https://www.geekdigging.com/2019/11/28/1668465912/)
+
+* [小白学 Python 爬虫（10）：Session 和 Cookies](https://www.geekdigging.com/2019/12/01/2475257648/)
+
+* [小白学 Python 爬虫（11）：urllib 基础使用（一）](https://www.geekdigging.com/2019/12/02/2333822325/)
+
+* [小白学 Python 爬虫（12）：urllib 基础使用（二）](https://www.geekdigging.com/2019/12/03/819896244/)
+
+* 剩余文章小编努力更新中，欢迎关注公众号，仓库目录不定期更新，更多文章可访问博客站 https://www.geekdigging.com/ 获取。
 
 [Github代码仓库](https://github.com/meteor1993/python-learning)
 
