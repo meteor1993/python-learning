@@ -3,8 +3,6 @@ import os
 from lxml import etree
 import time
 
-# 抓取地址
-url = 'https://www.mzitu.com/xinggan/'
 # 请求头添加 UA
 headers = {
     'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/78.0.3904.108 Safari/537.36',
@@ -26,8 +24,9 @@ def get_outer(outer_url):
     resp = urllib.request.urlopen(req)
 
     html = etree.HTML(resp.read().decode('utf-8'))
-
+    # 获取文件夹名称列表
     title_list = html.xpath('//*[@id="pins"]/li/a/img/@alt')
+    # 获取跳转链接列表
     src_list = html.xpath('//*[@id="pins"]/li/a/@href')
 
     print('当前页面' + outer_url + ', 共计爬取' + str(len(title_list)) + '个文件夹')
