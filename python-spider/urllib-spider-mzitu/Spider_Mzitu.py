@@ -30,7 +30,7 @@ def get_outer(outer_url):
     title_list = html.xpath('//*[@id="pins"]/li/a/img/@alt')
     src_list = html.xpath('//*[@id="pins"]/li/a/@href')
 
-    print('当前页面' + outer_url + ', 共计爬取{}个文件夹' + str(len(title_list)))
+    print('当前页面' + outer_url + ', 共计爬取' + str(len(title_list)) + '个文件夹')
 
     for i in range(len(title_list)):
         file_path = save_path + '\\' + title_list[i]
@@ -54,7 +54,7 @@ def get_inner(url, file_path):
 
     for i in range(1, int(max_num)):
         # 访问过快会被限制，增加睡眠时间
-        time.sleep(0.5)
+        time.sleep(1)
 
         inner_url = url + '/' + str(i)
         inner_req = urllib.request.Request(url=inner_url, headers=headers, method='GET')
