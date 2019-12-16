@@ -3,10 +3,10 @@ import pymysql
 
 # 数据库连接
 def connect():
-    conn = pymysql.connect(host='114.67.111.196',
+    conn = pymysql.connect(host='localhost',
                            port=3306,
                            user='root',
-                           password='wsy@123456',
+                           password='password',
                            database='test',
                            charset='utf8mb4')
 
