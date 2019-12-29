@@ -1,7 +1,7 @@
-MYSQL_HOST = '114.67.111.196'
+MYSQL_HOST = 'localhost'
 MYSQL_PORT = 3306
 MYSQL_USER = 'root'
-MYSQL_PASSWORD = 'wsy@123456'
+MYSQL_PASSWORD = 'password'
 MYSQL_DB ='test'
 MYSQL_CHARSET = 'utf8mb4'
 
