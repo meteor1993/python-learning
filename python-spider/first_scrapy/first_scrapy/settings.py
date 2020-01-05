@@ -64,9 +64,12 @@ ROBOTSTXT_OBEY = True
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'first_scrapy.pipelines.FirstScrapyPipeline': 300,
-#}
+ITEM_PIPELINES = {
+    'first_scrapy.pipelines.TextPipeline': 300,
+    'first_scrapy.pipelines.MongoPipeline': 400,
+}
+MONGO_URI='114.67.111.196'
+MONGO_DB='first_scrapy'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
