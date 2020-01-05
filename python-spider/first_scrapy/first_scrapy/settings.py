@@ -68,7 +68,7 @@ ITEM_PIPELINES = {
     'first_scrapy.pipelines.TextPipeline': 300,
     'first_scrapy.pipelines.MongoPipeline': 400,
 }
-MONGO_URI='114.67.111.196'
+MONGO_URI='localhost'
 MONGO_DB='first_scrapy'
 
 # Enable and configure the AutoThrottle extension (disabled by default)
