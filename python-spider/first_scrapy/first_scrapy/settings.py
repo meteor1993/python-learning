@@ -65,11 +65,18 @@ DOWNLOADER_MIDDLEWARES = {
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
 ITEM_PIPELINES = {
-    'first_scrapy.pipelines.TextPipeline': 300,
+    # 'first_scrapy.pipelines.TextPipeline': 300,
     'first_scrapy.pipelines.MongoPipeline': 400,
+    'first_scrapy.pipelines.MysqlPipeline': 401,
 }
 MONGO_URI='localhost'
 MONGO_DB='first_scrapy'
+
+MYSQL_HOST = 'localhost'
+MYSQL_DATABASE = 'test'
+MYSQL_USER = 'root'
+MYSQL_PASSWORD = '123456'
+MYSQL_PORT = 3306
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html

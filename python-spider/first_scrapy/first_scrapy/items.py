@@ -13,6 +13,13 @@ class QuoteItem(scrapy.Item):
     author = scrapy.Field()
     tags = scrapy.Field()
 
+class ImageItem(scrapy.Item):
+    collection = table = 'image'
+    id = scrapy.Field()
+    url = scrapy.Field()
+    title = scrapy.Field()
+    thumb = scrapy.Field()
+
 class FirstScrapyItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
