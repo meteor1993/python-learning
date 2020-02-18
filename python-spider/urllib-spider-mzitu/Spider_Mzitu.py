@@ -7,7 +7,7 @@ import random
 # 请求头添加 UA
 
 # 保存路径
-save_path = 'D:\\spider_file'
+save_path = 'D:\\spider_file_mm'
 
 def get_ua():
 	user_agents = [
@@ -123,7 +123,7 @@ def get_inner(url, file_path):
 
         for i in range(1, int(max_num)):
             # 访问过快会被限制，增加睡眠时间
-            time.sleep(0.5)
+            time.sleep(1)
 
             inner_url = url + '/' + str(i)
             inner_req = urllib.request.Request(url=inner_url, headers=headers, method='GET')
@@ -156,7 +156,7 @@ def get_inner(url, file_path):
     except:
         print('爬取报错')
 def main():
-    url = 'https://www.mzitu.com/xinggan/page/'
+    url = 'https://www.mzitu.com/mm/page/'
     for i in range(1, 163):
         get_outer(url + str(i))
 

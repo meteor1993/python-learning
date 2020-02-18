@@ -5,10 +5,10 @@ import pymysql
 
 # 数据库连接
 def connect():
-    conn = pymysql.connect(host='localhost',
-                           port=3306,
+    conn = pymysql.connect(host='cdb-1dydsrwm.bj.tencentcdb.com',
+                           port=10224,
                            user='root',
-                           password='123456',
+                           password='wsy@123456',
                            database='blog_data',
                            charset='utf8mb4')
 
