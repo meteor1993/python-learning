@@ -24,3 +24,17 @@ print(df.drop_duplicates())
 print(df.drop_duplicates(subset='read_num'))
 
 print(df.drop_duplicates(subset='plantform', keep='last'))
+
+print(df.dtypes)
+
+print(df['read_num'].dtypes)
+
+print(df['fans_num'].astype('float64'))
+
+df1 = pd.read_excel("demo.xlsx")
+print(df1)
+
+df1.columns = ['编号', '序号', '姓名', '消费金额']
+print(df1)
+
+print(df1.set_index('编号'))
