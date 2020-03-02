@@ -130,6 +130,16 @@
 * [小白学 Python 数据分析（4）：Pandas （三）数据结构 DataFrame](https://www.geekdigging.com/2020/02/05/9920298470/)
 * [小白学 Python 数据分析（5）：Pandas （四）基础操作（1）查看数据](https://www.geekdigging.com/2020/02/16/6852411690/)
 
+* [小白学 Python 数据分析（6）：Pandas （五）基础操作（2）数据选择](https://www.geekdigging.com/2020/02/20/6566891797/)
+
+* [小白学 Python 数据分析（7）：Pandas （六）数据导入](https://www.geekdigging.com/2020/02/23/7355903936/)
+
+* [小白学 Python 数据分析（8）：Pandas （七）数据预处理](https://www.geekdigging.com/2020/02/25/9013297409/)
+
+* [小白学 Python 数据分析（9）：Pandas （八）数据预处理（2）](https://www.geekdigging.com/2020/02/27/2857868620/)
+
+* [小白学 Python 数据分析（10）：Pandas （九）数据运算](https://www.geekdigging.com/2020/02/29/5808964196/)
+
 * 剩余文章小编努力更新中，欢迎关注公众号，仓库目录不定期更新，更多文章可访问博客站 https://www.geekdigging.com/ 获取。
 
 [Github代码仓库](https://github.com/meteor1993/python-learning)
