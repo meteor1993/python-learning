@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+
+</head>
+<body>
+    <div id="c520ad29b0c9491d8e841e2dc9a2fba8" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_c520ad29b0c9491d8e841e2dc9a2fba8 = echarts.init(
+            document.getElementById('c520ad29b0c9491d8e841e2dc9a2fba8'), 'light', {renderer: 'canvas'});
+        var option_c520ad29b0c9491d8e841e2dc9a2fba8 = {
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "series": [
+        {
+            "type": "bar",
+            "name": "\u4ea7\u54c1A",
+            "data": [
+                58000,
+                60200,
+                63000,
+                71000,
+                84000,
+                90500,
+                107000
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        {
+            "type": "bar",
+            "name": "\u4ea7\u54c1B",
+            "data": [
+                78000,
+                80200,
+                93000,
+                101000,
+                64000,
+                70500,
+                87000
+            ],
+            "barCategoryGap": "20%",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u4ea7\u54c1A",
+                "\u4ea7\u54c1B"
+            ],
+            "selected": {
+                "\u4ea7\u54c1A": true,
+                "\u4ea7\u54c1B": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "xAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            },
+            "data": [
+                2011,
+                2012,
+                2013,
+                2014,
+                2015,
+                2016,
+                2017
+            ]
+        }
+    ],
+    "yAxis": [
+        {
+            "show": true,
+            "scale": false,
+            "nameLocation": "end",
+            "nameGap": 15,
+            "gridIndex": 0,
+            "inverse": false,
+            "offset": 0,
+            "splitNumber": 5,
+            "minInterval": 0,
+            "splitLine": {
+                "show": false,
+                "lineStyle": {
+                    "show": true,
+                    "width": 1,
+                    "opacity": 1,
+                    "curveness": 0,
+                    "type": "solid"
+                }
+            }
+        }
+    ],
+    "title": [
+        {
+            "text": "11 ~ 17\u5e74 xxx \u516c\u53f8 xx \u4ea7\u54c1\u9500\u91cf\u56fe",
+            "subtext": "\u8fd9\u91cc\u662f\u526f\u6807\u9898",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_c520ad29b0c9491d8e841e2dc9a2fba8.setOption(option_c520ad29b0c9491d8e841e2dc9a2fba8);
+    </script>
+</body>
+</html>
