@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
+        <script type="text/javascript" src="https://assets.pyecharts.org/assets/maps/china.js"></script>
+
+</head>
+<body>
+    <div id="6251e34836cd4bbfbaf8cee2b95dc09b" class="chart-container" style="width:900px; height:500px;"></div>
+    <script>
+        var chart_6251e34836cd4bbfbaf8cee2b95dc09b = echarts.init(
+            document.getElementById('6251e34836cd4bbfbaf8cee2b95dc09b'), 'dark', {renderer: 'canvas'});
+        var option_6251e34836cd4bbfbaf8cee2b95dc09b = {
+    "backgroundColor": "#404a59",
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "series": [
+        {
+            "type": "map",
+            "name": "\u4e2d\u56fd\u5730\u56fe",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "mapType": "china",
+            "data": [
+                {
+                    "name": "\u5e7f\u4e1c",
+                    "value": 98
+                },
+                {
+                    "name": "\u5317\u4eac",
+                    "value": 147
+                },
+                {
+                    "name": "\u4e0a\u6d77",
+                    "value": 124
+                },
+                {
+                    "name": "\u6c5f\u897f",
+                    "value": 63
+                },
+                {
+                    "name": "\u6e56\u5357",
+                    "value": 76
+                },
+                {
+                    "name": "\u6d59\u6c5f",
+                    "value": 77
+                },
+                {
+                    "name": "\u6c5f\u82cf",
+                    "value": 116
+                }
+            ],
+            "roam": true,
+            "zoom": 1,
+            "showLegendSymbol": true,
+            "emphasis": {}
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                "\u4e2d\u56fd\u5730\u56fe"
+            ],
+            "selected": {
+                "\u4e2d\u56fd\u5730\u56fe": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "title": [
+        {
+            "text": "\u4e2d\u56fd\u5730\u56fe-\u793a\u4f8b",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ],
+    "toolbox": {
+        "show": true,
+        "title": "\u6570\u636e\u89c6\u56fe",
+        "readOnly": false,
+        "lang": [
+            "\u6570\u636e\u89c6\u56fe",
+            "\u5173\u95ed",
+            "\u5237\u65b0"
+        ],
+        "backgroundColor": "#fff",
+        "textareaColor": "#fff",
+        "textareaBorderColor": "#fff",
+        "textColor": "#000",
+        "buttonColor": "#c23531",
+        "buttonTextColor": "#fff"
+    },
+    "visualMap": {
+        "show": true,
+        "type": "continuous",
+        "min": 0,
+        "max": 100,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "orient": "vertical",
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 140,
+        "borderWidth": 0
+    }
+};
+        chart_6251e34836cd4bbfbaf8cee2b95dc09b.setOption(option_6251e34836cd4bbfbaf8cee2b95dc09b);
+    </script>
+</body>
+</html>
