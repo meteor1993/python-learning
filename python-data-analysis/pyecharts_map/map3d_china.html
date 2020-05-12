@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Awesome-pyecharts</title>
+            <script type="text/javascript" src="http://127.0.0.1:8000/assets/echarts.min.js"></script>
+        <script type="text/javascript" src="http://127.0.0.1:8000/assets/echarts-gl.min.js"></script>
+        <script type="text/javascript" src="http://127.0.0.1:8000/assets/maps/china.js"></script>
+
+</head>
+<body>
+    <div id="9e3b3f8590a5403e81c94af7e4a423e5" class="chart-container" style="width:1600px; height:900px;"></div>
+    <script>
+        var chart_9e3b3f8590a5403e81c94af7e4a423e5 = echarts.init(
+            document.getElementById('9e3b3f8590a5403e81c94af7e4a423e5'), 'dark', {renderer: 'canvas'});
+        var option_9e3b3f8590a5403e81c94af7e4a423e5 = {
+    "backgroundColor": "#404a59",
+    "animation": true,
+    "animationThreshold": 2000,
+    "animationDuration": 1000,
+    "animationEasing": "cubicOut",
+    "animationDelay": 0,
+    "animationDurationUpdate": 300,
+    "animationEasingUpdate": "cubicOut",
+    "animationDelayUpdate": 0,
+    "series": [
+        {
+            "type": "map3D",
+            "map": "map3D",
+            "coordinateSystem": "geo3D",
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            },
+            "data": [],
+            "showLegendSymbol": true,
+            "emphasis": {}
+        }
+    ],
+    "legend": [
+        {
+            "data": [
+                ""
+            ],
+            "selected": {
+                "": true
+            },
+            "show": true,
+            "padding": 5,
+            "itemGap": 10,
+            "itemWidth": 25,
+            "itemHeight": 14
+        }
+    ],
+    "tooltip": {
+        "show": true,
+        "trigger": "item",
+        "triggerOn": "mousemove|click",
+        "axisPointer": {
+            "type": "line"
+        },
+        "textStyle": {
+            "fontSize": 14
+        },
+        "borderWidth": 0
+    },
+    "visualMap": {
+        "show": false,
+        "type": "continuous",
+        "min": 0,
+        "max": 100,
+        "inRange": {
+            "color": [
+                "#50a3ba",
+                "#eac763",
+                "#d94e5d"
+            ]
+        },
+        "calculable": true,
+        "inverse": false,
+        "splitNumber": 5,
+        "orient": "vertical",
+        "showLabel": true,
+        "itemWidth": 20,
+        "itemHeight": 140,
+        "borderWidth": 0
+    },
+    "geo3D": {
+        "map": "china",
+        "boxWidth": 100,
+        "boxHeight": 10,
+        "regionHeight": 3,
+        "groundPlane": {
+            "show": false,
+            "color": "#aaa"
+        },
+        "instancing": false,
+        "itemStyle": {
+            "color": "#313c48",
+            "borderColor": "#fff",
+            "borderWidth": 0.8,
+            "opacity": 1
+        },
+        "label": {
+            "show": true,
+            "textStyle": {
+                "color": "#fff",
+                "fontSize": 16,
+                "backgroundColor": "rgba(0,0,0,0)"
+            }
+        },
+        "emphasis": {
+            "label": {
+                "show": true,
+                "position": "top",
+                "margin": 8
+            }
+        },
+        "light": {
+            "main": {
+                "color": "#fff",
+                "intensity": 1.2,
+                "shadow": false,
+                "shadowQuality": "medium",
+                "alpha": 55,
+                "beta": 10
+            },
+            "ambient": {
+                "color": "#fff",
+                "intensity": 0.3
+            },
+            "ambientCubemap": {
+                "diffuseIntensity": 0.5,
+                "specularIntensity": 0.5
+            }
+        },
+        "temporalSuperSampling": {
+            "enable": "auto"
+        },
+        "zlevel": -10,
+        "left": "auto",
+        "top": "auto",
+        "right": "auto",
+        "bottom": "auto",
+        "width": "auto",
+        "height": "auto"
+    },
+    "title": [
+        {
+            "text": "\u5168\u56fd\u884c\u653f\u533a\u5212\u5730\u56fe",
+            "padding": 5,
+            "itemGap": 10
+        }
+    ]
+};
+        chart_9e3b3f8590a5403e81c94af7e4a423e5.setOption(option_9e3b3f8590a5403e81c94af7e4a423e5);
+    </script>
+</body>
+</html>

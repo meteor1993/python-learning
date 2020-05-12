@@ -9,8 +9,8 @@ shanghai_people = [65.38, 108.44, 69.4, 106.28, 128.19, 79.7, 131.27, 254.35, 20
 BAIDU_LINK='https://baike.baidu.com/item/%E4%B8%8A%E6%B5%B7%E8%A1%8C%E6%94%BF%E5%8C%BA%E5%88%92/7426389?fr=aladdin'
 
 c = (
-    Map(init_opts=opts.InitOpts(theme=ThemeType.DARK, bg_color='#404a59', width='800px', height='450px'))
-    .add("常住人口", [list(z) for z in zip(shanghai_list, shanghai_people)], "上海")
+    Map(init_opts=opts.InitOpts(theme=ThemeType.DARK, bg_color='#404a59', width='1600px', height='900px'))
+    .add("上海市-常住人口", [list(z) for z in zip(shanghai_list, shanghai_people)], "上海")
     .set_global_opts(
         title_opts=opts.TitleOpts(
             title="上海地图-常住人口（单位：万人）",

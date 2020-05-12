@@ -6,7 +6,9 @@ from pyecharts.globals import ThemeType
 c = (
     Map(init_opts=opts.InitOpts(
         theme=ThemeType.DARK,
-        bg_color='#404a59'
+        bg_color='#404a59',
+        width='1600px',
+        height='900px'
     ))
     .add(
         "中国地图",
