@@ -1,5 +1,8 @@
 import cv2 as cv
 
+# 查看版本信息
+print(cv.getVersionString())
+
 # 读取图像
 img = cv.imread("maliao.jpg", cv.IMREAD_COLOR)
 cv.imshow("read_img", img)
