@@ -140,6 +140,28 @@
 
 * [小白学 Python 数据分析（10）：Pandas （九）数据运算](https://www.geekdigging.com/2020/02/29/5808964196/)
 
+* [小白学 Python 数据分析（11）：Pandas （十）数据分组](https://www.geekdigging.com/2020/03/03/5975552137/)
+
+* [小白学 Python 数据分析（12）：Pandas （十一）数据透视表（pivot_table）](https://www.geekdigging.com/2020/03/04/8327177610/)
+
+* [小白学 Python 数据分析（13）：Pandas （十二）数据表拼接](https://www.geekdigging.com/2020/03/06/5036602239/)
+
+* [小白学 Python 数据分析（14）：Pandas （十三）数据导出](https://www.geekdigging.com/2020/03/07/6918490736/)
+
+* [小白学 Python 数据分析（15）：数据可视化概述](https://www.geekdigging.com/2020/03/09/7393240956/)
+
+* [小白学 Python 数据分析（16）：Matplotlib（一）坐标系](https://www.geekdigging.com/2020/03/14/2444388683/)
+
+* [小白学 Python 数据分析（17）：Matplotlib（二）基础操作](https://www.geekdigging.com/2020/03/16/2401104162/)
+
+* [小白学 Python 数据分析（18）：Matplotlib（三）常用图表（上）](https://www.geekdigging.com/2020/03/18/2955681967/)
+
+* [小白学 Python 数据分析（19）：Matplotlib（四）常用图表（下）](https://www.geekdigging.com/2020/03/20/4774396761/)
+
+* [小白学 Python 数据分析（20）：pyecharts 概述](https://www.geekdigging.com/2020/03/21/7328677048/)
+
+* [小白学 Python 数据分析（21）：pyecharts 好玩的图表（系列终篇）](https://www.geekdigging.com/2020/03/21/9664526097/)
+
 * 剩余文章小编努力更新中，欢迎关注公众号，仓库目录不定期更新，更多文章可访问博客站 https://www.geekdigging.com/ 获取。
 
 [Github代码仓库](https://github.com/meteor1993/python-learning)
