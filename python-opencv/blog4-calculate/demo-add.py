@@ -5,8 +5,10 @@ img = cv.imread("maliao.jpg", cv.IMREAD_UNCHANGED)
 
 test = img
 
+# Numpy 加法
 result1 = img + test
 
+# OpenCV 加法
 result2 = cv.add(img, test)
 
 # 显示图像
