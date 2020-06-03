@@ -1,7 +1,9 @@
 本仓库为《小白学 Python 系列文章》 的代码仓库，欢迎点赞、收藏。更多文章可访问博客站 https://www.geekdigging.com/ 获取。
 
 ![](https://img.shields.io/badge/Python-3.7.4-brightgreen)
-![](https://img.shields.io/badge/license-MPL--2.0-blue)
+![](https://img.shields.io/badge/license-MIT-blue)
+![](https://img.shields.io/badge/pyecharts-1.7.0-yellow)
+![](https://img.shields.io/badge/OpenCV-4.2.0-red)
 
 ***
 
