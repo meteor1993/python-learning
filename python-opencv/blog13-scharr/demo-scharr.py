@@ -7,8 +7,8 @@ rgb_img = cv.cvtColor(img, cv.COLOR_BGR2RGB)
 gray_img = cv.cvtColor(img, cv.COLOR_BGR2GRAY)
 
 # Scharr 算子
-x = cv.Scharr(gray_img, cv.CV_32F, 1, 0) # X 方向
-y = cv.Scharr(gray_img, cv.CV_32F, 0, 1) # Y 方向
+x = cv.Scharr(gray_img, cv.CV_16S, 1, 0) # X 方向
+y = cv.Scharr(gray_img, cv.CV_16S, 0, 1) # Y 方向
 absX = cv.convertScaleAbs(x)
 absY = cv.convertScaleAbs(y)
 Scharr = cv.addWeighted(absX, 0.5, absY, 0.5, 0)
